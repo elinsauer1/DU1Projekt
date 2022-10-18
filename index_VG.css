@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "Barlow Condensed";
+    src: url("BarlowCondensed-Regular.ttf");
+}
+@font-face {
+    font-family:"Bungee Outline";
+    src: url("BungeeOutline-Regular.ttf");
+}  
+
+
+body {
+    margin:0;
+    background-image: url(images/background6.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 150vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    --white: rgb(255, 255, 255);
+}
+
+body > div {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 85vw;
+    height: 200%;
+    margin-top: 60px;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+div > header > h1 {
+    color: var(--white);
+    font-family: "Bungee Outline";
+    font-size: 80px;
+}
+
+div > nav {
+    color: black;
+    display: flex;
+    gap: 10px;
+}
+
+div > nav > div {
+     background-color: rgba(255, 255, 255, 0.6);
+     flex-grow: 1;
+     text-align: center;
+     font-size: 30px;
+     font-family: "Barlow Condensed";
+     border-radius: 15px;
+     padding: 20px;
+}

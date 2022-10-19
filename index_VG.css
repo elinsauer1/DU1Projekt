@@ -17,15 +17,21 @@ body {
 body > div > div {
     background-color: rgba(0, 0, 0, 0.3);
     margin: 5vw;
-    padding: 2vw;
+    padding: 3vw;
     border-radius: 30px;
 }
 
 header > h1 {
     color: var(--white);
     font-family: "Bungee Shade";
-    font-size: 70px;
+    font-size: 6vw;
     margin-top: 0;
+}
+
+@media (min-width: 1111px){
+    header > h1 {
+        font-size: 66.35px;
+    }
 }
 
 div > nav {
@@ -53,6 +59,10 @@ div > nav > div:first-child:hover, div > nav > div:nth-child(3):hover, div > nav
 .marked {
     border: white 1px solid;
     font-weight: bold;
+}
+
+footer {
+    color: var(--smoke_white);
 }
 
 
@@ -112,9 +122,14 @@ div > nav > div:first-child:hover, div > nav > div:nth-child(3):hover, div > nav
     font-size: 1vw;
 }
 
+.song_list ul {
+    margin-top: 0;
+}
+
 .song_list h2 {
-    padding-left: 2vw;
+    padding-left: 2.4vw;
     font-size: 1.5vw;
+    margin-bottom: 0;
 }
 
 .song_list > div {
@@ -136,11 +151,24 @@ div > nav > div:first-child:hover, div > nav > div:nth-child(3):hover, div > nav
 } 
 
 .cover > img {
+    border-radius: 30px 30px 0 0;
+    object-fit: cover;
+}
+.cover {
+    display: flex;
+    position: relative;
+}
+
+.show_hover {
+    position: absolute;
     height: 100%;
     width: 100%;
-    border-radius: 30px 30px 0 0;
-    object-fit: contain;
+    opacity: 1;   
+    
+    transition-property: opacity;
+    transition-duration: 1s;
 }
+
 
 /*Gemensamt Anecdots*/
 .anecdotes {

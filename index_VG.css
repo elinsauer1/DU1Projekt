@@ -13,27 +13,30 @@ body {
     background-image: url(images/background6.jpg);
     background-attachment: fixed;
     background-size: cover;
-    height: 150vh;
-    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
-
+color: white;
     --white: rgb(255, 255, 255);
+    --smoke_white: rgba(255, 255, 255, 0.6);
 }
 
 body > div {
-    background-color: rgba(0, 0, 0, 0.3);
-    width: 85vw;
-    height: 200%;
-    margin-top: 60px;
-    border-radius: 30px;
-    padding: 30px;
+  
 }
+
+body > div > div {
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 5vw;
+   padding: 2vw;
+}
+
 
 div > header > h1 {
     color: var(--white);
     font-family: "Bungee Outline";
-    font-size: 80px;
+    font-size: 70px;
+    margin-top: 0;
 }
 
 div > nav {
@@ -43,11 +46,75 @@ div > nav {
 }
 
 div > nav > div {
-     background-color: rgba(255, 255, 255, 0.6);
-     flex-grow: 1;
+     background-color: var(--smoke_white);
+     flex-basis: 25%;
      text-align: center;
-     font-size: 30px;
+     font-size: 25px;
      font-family: "Barlow Condensed";
      border-radius: 15px;
-     padding: 20px;
+     padding: 15px;
+     margin-bottom: 50px;
 }
+
+
+.marked {
+    border: white 1px solid;
+    font-weight: bold;
+    
+}
+
+.best {
+    background-color: rgba(0, 0, 0, 0.35);
+    border: purple 2px solid;
+    border-radius: 30px;
+    display: grid;
+
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 1vw;
+}
+
+.anecdotes {
+    grid-row: 3;
+    grid-column: 1/3;
+}
+
+.song_list {
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+}
+
+.song_list > div {
+    background-color: red;
+    font-family: "Barlow Condensed";
+}
+
+.song_list > div:first-child {
+    border-radius: 0 0 0 20px;
+}
+
+.song_list > div:last-child {
+    border-radius: 0 0 20px 0;
+}
+
+
+/*Inget med ovan att göra*/
+
+.show_hover {
+    display: none;
+}
+.album_data div:first-child h1{
+    font-family: "Bungee Outline";
+    color: var(--smoke_white);
+    font-size: ;
+}
+
+.album_data div:first-child h2 {
+    color: var(--white);
+    font-family: "barlow condensed";
+}
+

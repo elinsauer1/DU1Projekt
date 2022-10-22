@@ -47,12 +47,8 @@ header > h1 {
         font-size: 33.3px;
     }
 
-    .best .album_data p, .best .anecdotes li, .best .album_data li {
+    .best .album_data p, .best .song_list h2, .best .anecdotes li, .best .album_data li {
         font-size: 16.65px;
-    }
-
-    .best .song_list h2 {
-        font-size: 21.45px;
     }
 
     .best .song_list li {
@@ -82,6 +78,111 @@ header > h1 {
 
     .best .song_list li {
         font-size: 9.01667px;
+    }
+
+}
+
+@media (max-width: 800px) {
+    header > h1 {
+        text-align: center;
+    }
+
+    main .best {
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 3fr 2fr;
+    }
+
+    main .best .album_data {
+        grid-row: 2/3;
+        grid-column: 1/3;
+    }
+
+    .best .song_list {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+
+    }
+
+    .best .anecdotes {
+        grid-row: 3/4;
+        grid-column: 1/3;
+
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+
+    main #The_Slow_Rush .anecdotes .top_left_90 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    main #The_Slow_Rush .anecdotes .two_wide {
+        grid-column: 3/5;
+        grid-row: 1/2;
+    }
+
+    main #The_Slow_Rush .anecdotes .bottom_right_90 {
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+
+    main #currents .anecdotes li:nth-child(5){
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+    main #currents .anecdotes .bottom_left_90 {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    main #currents .anecdotes .bottom_right_90 {
+        grid-column: 4/5;
+        grid-row: 2/3;
+    }
+
+    main .song_list > div:first-child {
+        border-radius: 0 20px 0 0;
+    }
+
+    .cover img {
+        border-radius: 30px 0 0 30px;
+    }
+}
+
+@media (max-width:500px) {
+    body > div > div {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    main .best {
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 1fr;
+    }
+
+    .best .song_list {
+        grid-row: 2/3;
+        grid-column: 1;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    main .best .album_data {
+        grid-row: 3/4;
+        grid-column: 1;
+    }
+
+    .best .anecdotes {
+        grid-row: 4/5;
+        grid-column: 1;
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
     }
 
 }
@@ -155,7 +256,6 @@ footer {
 
 .album_data ul, .album_data p {
     font-size: var(--p_and_li_size);
-    margin-bottom: 5vw;
     list-style-type: none;
 }
 
@@ -205,25 +305,28 @@ footer {
     opacity: 0;
 } 
 
-.cover > img {
+img {
     border-radius: 30px 30px 0 0;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    max-width: 100%;
-    min-height: 100%;
 }
+
 .cover {
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
 .show_hover {
     position: absolute;
     opacity: 1;   
+
     
     transition-property: opacity;
     transition-duration: 1s;
 }
-
 
 
 /*Gemensamt Anecdots*/

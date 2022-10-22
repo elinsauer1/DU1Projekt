@@ -145,7 +145,11 @@ header > h1 {
     }
 
     main .song_list > div:first-child {
-        border-radius: 0 20px 0 0;
+        border-radius: 0 0 0 20px;
+    }
+
+    main .song_list > div:last-child {
+        border-radius: 0 0 20px 0;
     }
 
     .cover img {
@@ -171,7 +175,7 @@ header > h1 {
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr;
     }
-    
+
     main .best .album_data {
         grid-row: 3/4;
         grid-column: 1;
@@ -183,6 +187,34 @@ header > h1 {
 
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr 1fr;
+    }
+
+    main #The_Slow_Rush .anecdotes .bottom_left_90 {
+        grid-column: 2/4;
+        grid-row: 1/2;
+    }
+
+    main #currents .anecdotes .bottom_left_90 {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    .cover img {
+        border-radius: 30px 30px 0 0;
+    }
+
+    main #currents .anecdotes li:nth-child(5){
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+    main #currents .anecdotes .bottom_right_90 {
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+
+    .cover .show_hover:hover {
+        opacity: 1;
     }
 
 }

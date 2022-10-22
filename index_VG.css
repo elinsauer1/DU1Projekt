@@ -1,3 +1,7 @@
+:root {
+    --p_and_li_size: 1.5vw;
+}
+
 body {
     margin:0;
     background-image: url(images/background6.jpg);
@@ -16,8 +20,8 @@ body {
 
 body > div > div {
     background-color: rgba(0, 0, 0, 0.3);
-    margin: 5vw;
-    padding: 3vw;
+    margin: 9vw 5vw;
+    padding: 1vw;
     border-radius: 30px;
 }
 
@@ -26,25 +30,74 @@ header > h1 {
     font-family: "Bungee Shade";
     font-size: 6vw;
     margin-top: 0;
+    padding-bottom: 2vw;
 }
+
 
 @media (min-width: 1111px){
     header > h1 {
-        font-size: 66.35px;
+        font-size: 66.6px;
+    }
+
+    nav > div, div > footer, .best .album_data h2 {
+        font-size: 22.2px;
+    }
+
+    .best .album_data h1 {
+        font-size: 33.3px;
+    }
+
+    .best .album_data p, .best .anecdotes li, .best .album_data li {
+        font-size: 16.65px;
+    }
+
+    .best .song_list h2 {
+        font-size: 21.45px;
+    }
+
+    .best .song_list li {
+        font-size: 11.1px;
     }
 }
 
-div > nav {
+
+
+
+@media (max-width: 900px){
+    header > h1 {
+        font-size: 54.1167px;
+    }
+
+    nav > div, div > footer, .best .album_data h2 {
+        font-size: 18.0333px;
+    }
+
+    .best .album_data h1 {
+        font-size: 27.05px;
+    }
+
+    .best .album_data p, .best .song_list h2, .best .anecdotes li,  .best .album_data li  {
+        font-size: 13.5167px;
+    }
+
+    .best .song_list li {
+        font-size: 9.01667px;
+    }
+
+}
+
+
+nav {
     color: black;
     display: flex;
     gap: 10px;
+    font-size: 2vw;
 }
 
 div > nav > div {
      background-color: var(--smoke_white);
      flex-basis: 25%;
      text-align: center;
-     font-size: 25px;
      border-radius: 15px;
      padding: 15px;
      margin-bottom: 50px;
@@ -57,12 +110,17 @@ div > nav > div:first-child:hover, div > nav > div:nth-child(3):hover, div > nav
 }
 
 .marked {
-    border: white 1px solid;
+    border: var(--smoke_white)1px solid;
     font-weight: bold;
+    box-shadow: 0 0 15px var(--smoke_white);
 }
 
 footer {
     color: var(--smoke_white);
+    display: flex;
+    align-items: flex-end;
+    padding-top: 5vw;
+    font-size: 2vw;
 }
 
 
@@ -81,31 +139,28 @@ footer {
 }
 
 /*Gemensamt Album-data*/
-.album_data div:first-child h1{
+.album_data h1{
     font-family: "Bungee Outline";
     color: var(--smoke_white);
     font-size: 3vw;
     margin: 0;
 }
 
-.album_data div:first-child h2 {
+.album_data h2 {
     color: var(--white);
     font-size: 2vw;
     margin-top: 0;
     margin-bottom: 5vw;
 }
 
-.album_data div:nth-child(2) {
-    font-size: 1vw;
+.album_data ul, .album_data p {
+    font-size: var(--p_and_li_size);
     margin-bottom: 5vw;
-}
-
-.album_data div:nth-child(2) ul {
     list-style-type: none;
 }
 
 .album_data .album_description {
-    font-size: 1vw;
+    font-size: var(--p_and_li_size);
 }
 
 /*Gemensamt Song-lists*/
@@ -144,15 +199,17 @@ footer {
     border-radius: 0 0 20px 0;
 }
 
+
 /*Gemensamt Bilder*/
 .show_hover:hover {
-    Cursor: pointer;
     opacity: 0;
 } 
 
 .cover > img {
     border-radius: 30px 30px 0 0;
     object-fit: cover;
+    max-width: 100%;
+    min-height: 100%;
 }
 .cover {
     display: flex;
@@ -161,13 +218,12 @@ footer {
 
 .show_hover {
     position: absolute;
-    height: 100%;
-    width: 100%;
     opacity: 1;   
     
     transition-property: opacity;
     transition-duration: 1s;
 }
+
 
 
 /*Gemensamt Anecdots*/
@@ -178,12 +234,13 @@ footer {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
-    gap: 1vw;
+    gap: 0.5vw;
     padding-left: 0;
+    margin: 0;
 }
 
 .anecdotes li {
-    font-size: 1vw;
+    font-size: var(--p_and_li_size);
     list-style-type: none;
     padding: 4.5vw 1vw;
 }
@@ -195,6 +252,12 @@ footer {
 
     grid-column: 1/2;
     grid-row: 1/2;
+}
+
+.best .anecdotes .image {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 1vw;
 }
 
 

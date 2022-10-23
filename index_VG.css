@@ -1,5 +1,5 @@
 :root {
-    --p_and_li_size: 1.5vw;
+    --text_size: 1.5vw;
 }
 
 body {
@@ -28,7 +28,7 @@ body > div > div {
 header > h1 {
     color: var(--white);
     font-family: "Bungee Shade";
-    font-size: 6vw;
+    font-size: calc(4 * var(--text_size));
     margin-top: 0;
     padding-bottom: 2vw;
 }
@@ -145,7 +145,7 @@ header > h1 {
     }
 
     main .song_list > div:first-child {
-        border-radius: 0 0 0 20px;
+        border-radius: 0 20px 0 0;
     }
 
     main .song_list > div:last-child {
@@ -174,6 +174,10 @@ header > h1 {
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr;
+    }
+
+    main .song_list > div:first-child {
+        border-radius: 0 0 0 20px;
     }
 
     main .best .album_data {
@@ -224,7 +228,7 @@ nav {
     color: black;
     display: flex;
     gap: 10px;
-    font-size: 2vw;
+    font-size: calc(1.3333 * var(--text_size));
 }
 
 div > nav > div {
@@ -253,7 +257,7 @@ footer {
     display: flex;
     align-items: flex-end;
     padding-top: 5vw;
-    font-size: 2vw;
+    font-size: calc(1.3333 * var(--text_size));
 }
 
 
@@ -275,24 +279,24 @@ footer {
 .album_data h1{
     font-family: "Bungee Outline";
     color: var(--smoke_white);
-    font-size: 3vw;
+    font-size: calc(2 * var(--text_size));
     margin: 0;
 }
 
 .album_data h2 {
     color: var(--white);
-    font-size: 2vw;
+    font-size: calc(1.3333 * var(--text_size));
     margin-top: 0;
     margin-bottom: 5vw;
 }
 
 .album_data ul, .album_data p {
-    font-size: var(--p_and_li_size);
+    font-size: var(--text_size);
     list-style-type: none;
 }
 
 .album_data .album_description {
-    font-size: var(--p_and_li_size);
+    font-size: var(--text_size);
 }
 
 /*Gemensamt Song-lists*/
@@ -306,7 +310,7 @@ footer {
 }
 
 .song_list li {
-    font-size: 1vw;
+    font-size: calc(0.6666 * var(--text_size));
 }
 
 .song_list ul {
@@ -315,7 +319,7 @@ footer {
 
 .song_list h2 {
     padding-left: 2.4vw;
-    font-size: 1.5vw;
+    font-size: var(--text_size);
     margin-bottom: 0;
 }
 
@@ -375,7 +379,7 @@ img {
 }
 
 .anecdotes li {
-    font-size: var(--p_and_li_size);
+    font-size: var(--text_size);
     list-style-type: none;
     padding: 4.5vw 1vw;
 }
@@ -494,6 +498,17 @@ img {
 .empty {
     display: none;
 }
+
+#currents .album_data h1::before {
+    content: url('media/number-1-icon.png');
+    position: absolute;
+    height: 40px;
+}
+/*
+#currents .album_data h1 {
+    position: relative;
+}
+*/
 
 
 

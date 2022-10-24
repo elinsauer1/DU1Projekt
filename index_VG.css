@@ -1,6 +1,5 @@
 :root {
     --text_size: 1.5vw;
-
     --white: rgb(255, 255, 255);
     --smoke_white: rgba(255, 255, 255, 0.6);
     --red_color: #ac0703;
@@ -375,6 +374,7 @@ img {
 
 }
 
+
 @media (max-width: 800px) {
     body {
         background-image: url(images1/currents_backg3.jpg);
@@ -402,7 +402,6 @@ img {
         display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr;
-
     }
 
     .best .anecdotes {
@@ -480,6 +479,7 @@ img {
         top: -23px;
     }
 }
+
 
 @media (max-width:500px) {
     body {

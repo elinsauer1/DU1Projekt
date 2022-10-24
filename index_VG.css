@@ -4,7 +4,7 @@
 
 body {
     margin:0;
-    background-image: url(images/background6.jpg);
+    background-image: url(images1/currents_backg.jpg);
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
@@ -155,6 +155,26 @@ header > h1 {
     .cover img {
         border-radius: 30px 0 0 30px;
     }
+
+    header > h1 {
+        font-size: 66.6px;
+    }
+
+    nav > div, div > footer, .best .album_data h2 {
+        font-size: 22.2px;
+    }
+
+    .best .album_data h1 {
+        font-size: 33.3px;
+    }
+
+    .best .album_data p, .best .song_list h2, .best .anecdotes li, .best .album_data li {
+        font-size: 16.65px;
+    }
+
+    .best .song_list li {
+        font-size: 11.1px;
+    }
 }
 
 @media (max-width:500px) {
@@ -221,6 +241,9 @@ header > h1 {
         opacity: 1;
     }
 
+    .best .album_data .album_description {
+        margin: 9vw 0;
+    }
 }
 
 
@@ -295,8 +318,20 @@ footer {
     list-style-type: none;
 }
 
+.album_data ul {
+    margin-top: 0;
+}
+
 .album_data .album_description {
     font-size: var(--text_size);
+}
+
+.album_data div:nth-child(2) p {
+    margin-bottom: 0;
+}
+
+.album_data div:nth-child(2) {
+    margin: 6vw 0;
 }
 
 /*Gemensamt Song-lists*/
@@ -315,6 +350,7 @@ footer {
 
 .song_list ul {
     margin-top: 0;
+    list-style: decimal;
 }
 
 .song_list h2 {
@@ -433,7 +469,7 @@ img {
     grid-column: 5/6;
     grid-row: 1/2;
 
-    background-image: url(images/tame-impala.jpg);
+    background-image: url(images1/tame-impala.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 0 20px 20px 20px;
@@ -488,7 +524,7 @@ img {
     grid-column: 4/6;
     grid-row: 1;
 
-    background-image: url(images/Tame_impala_currents.jpg);
+    background-image: url(images1/Tame_impala_currents.jpg);
     background-position: center;
     background-size: cover;
  
@@ -499,16 +535,22 @@ img {
     display: none;
 }
 
-#currents .album_data h1::before {
-    content: url('media/number-1-icon.png');
-    position: absolute;
-    height: 40px;
-}
-/*
-#currents .album_data h1 {
+#currents .album_data {
     position: relative;
 }
-*/
+
+#currents .album_data::before {
+    content:'';
+    background-image: url('media/number-1-icon.png');
+    background-size: 7vh 7vh;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;
+    left: -17px;
+    top: -17px;
+    height: 100px;
+    width: 100px;
+}
 
 
 
